@@ -1,7 +1,7 @@
 {
-  "name": "fish",
+  "name": "real-chi-hoods",
   "version": "1.0.0",
-  "description": "posting fish",
+  "description": "Real Chicago neighborhoods",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

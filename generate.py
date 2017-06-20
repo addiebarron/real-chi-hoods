@@ -20,7 +20,7 @@ def WhichArray(s):
         'name': name,
         'prefix': prefix,
         'locale': locale,
-        'suffix': locale,
+        'suffix': suffix,
         'mod': mod
     }[s]
 
@@ -40,7 +40,7 @@ def ParseTemplate(template):
 compass = {'north':1,
 		   'south':1,
 		   'east':0.5,
-		   'west':0.5}
+		   'west':0.7}
 
 position = {'upper':1,
 			'lower':1}
@@ -61,11 +61,12 @@ name = {'garfield':1,
 		 'irving':0.8,
 		 'hyde':0.7,
 		 'humboldt':0.6,
-		 'grand':0.5}
+		 'grand':0.3,
+		 'grant':0.7}
 
-prefix = {'lake':10,
+prefix = {'lake':1,
 		  'wood':1,
-		  'wild':0.3,
+		  'wild':0.1,
 		  'river':0.8,
 		  'ken':0.3,
 		  'green':0.6,
@@ -102,11 +103,11 @@ suffix = {'ville':0.8,
 mod = {'old':1,
 	   'new':0.5}
 
-templates = {'compass prefix_suffix':1,
-			 'compass name locale':1,
+templates = {'compass prefix_suffix':0.8,
+			 'compass name locale':0.8,
 			 'position prefix_suffix':0.1,
-			 'position name locale':0.1,
-			 'compass locale':0.05,
+			 'position name locale':0.2,
+			 'compass locale':0.1,
 			 'mod compass prefix_suffix':0.1,
 			 'mod name locale':0.1,
 			 'name locale':0.8,

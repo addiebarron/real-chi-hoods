@@ -12,16 +12,3 @@ pyshell.on('message', function(message) {
 		console.log(data)
 	});
 });
-
-/*
-
-console.log(Generate());
-
-function Generate() {
-	PythonShell.run('generate.py', function (err, results) {
-		if (err) throw err;
-		// results is an array consisting of messages collected during execution
-		console.log(results[0]);
-	});
-}
-*/
