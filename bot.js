@@ -6,15 +6,6 @@ var fs = require('fs'),
 
 var T = new Twit(config);
 
-setInterval(function(){
-	try {
-    	Tweet();
-	}
-	catch (e) {
-		console.log(e);
-	}
-}, 60000 * 1);
-
 function Tweet() {
 	PythonShell.run('generate.py', { mode: 'text' }, function (err, results) {
 		if (err) throw err;
@@ -24,3 +15,5 @@ function Tweet() {
 		});
 	});
 }
+
+Tweet();
