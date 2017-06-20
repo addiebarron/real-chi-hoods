@@ -4,11 +4,23 @@ var fs = require('fs'),
     PythonShell = require('python-shell'),
     config = require(path.join(__dirname, 'config.js'));
 
-var pyshell = new PythonShell('generate.py');
 var T = new Twit(config);
 
-pyshell.on('message', function(message) {
-	T.post('statuses/update', { status : message }, function(err, data, response) {
-		console.log(data)
+setInterval(function(){
+	try {
+    	Tweet();
+	}
+	catch (e) {
+		console.log(e);
+	}
+}, 60000 * 1);
+
+function Tweet() {
+	PythonShell.run('generate.py', { mode: 'text' }, function (err, results) {
+		if (err) throw err;
+		// results is an array consisting of messages collected during execution
+		T.post('statuses/update', { status : results[0] }, function(err, data, response) {
+			console.log(data)
+		});
 	});
-});
+}
