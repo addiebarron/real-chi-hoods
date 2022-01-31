@@ -1,0 +1,17 @@
+{
+  "name": "real-chi-hoods",
+  "version": "1.0.0",
+  "description": "Real Chicago neighborhoods",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^15.0.0",
+    "python-shell": "^0.4.0",
+    "twit": "^2.2.9"
+  }
+}
